@@ -34,10 +34,26 @@ export class TestHtmlPdfRenderingStack extends Stack {
         bundling: {
           externalModules: ["chrome-aws-lambda", "puppeteer-core"],
         },
-        memorySize: 2096,
+        memorySize: 2048,
         timeout: Duration.seconds(30),
       }
     );
+    const reactPdfExportLambda = new nodejs.NodejsFunction(
+      this,
+      "react-pdf-export-lambda",
+      {
+        entry: path.join(
+          __dirname,
+          "../test-html-pdf-rendering-react-pdf/src/lambda/exportLambda.ts"
+        ),
+        handler: "handler",
+        runtime: lambda.Runtime.NODEJS_14_X,
+        memorySize: 2048,
+        timeout: Duration.seconds(30),
+      }
+    );
+
+    testPdfBucket.grantPut(reactPdfExportLambda);
     testPdfBucket.grantPut(puppeteerExportLambda);
   }
 }

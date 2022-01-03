@@ -1,7 +1,7 @@
 {
   "name": "test-html-pdf-rendering",
   "private": true,
-  "workspaces": ["test-html-pdf-rendering-puppeteer/*"],
+  "workspaces": ["test-html-pdf-rendering-puppeteer/*", "test-html-pdf-rendering-react-pdf/*"],
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
