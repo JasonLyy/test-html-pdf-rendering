@@ -1,0 +1,32 @@
+{
+  "name": "test-html-pdf-rendering",
+  "private": true,
+  "workspaces": ["test-html-pdf-rendering-puppeteer/*"],
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "bin": {
+    "test-html-pdf-rendering": "bin/test-html-pdf-rendering.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "cdk": "cdk",
+    "deploy": "cdk deploy"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.10",
+    "@types/node": "10.17.27",
+    "jest": "^26.4.2",
+    "ts-jest": "^26.2.0",
+    "aws-cdk": "2.3.0",
+    "ts-node": "^9.0.0",
+    "typescript": "~3.9.7"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "2.3.0",
+    "constructs": "^10.0.0",
+    "source-map-support": "^0.5.16"
+  }
+}
