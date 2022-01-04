@@ -2,7 +2,7 @@
   "name": "test-html-pdf-rendering-puppeteer",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "JasonLyy <ly.jason.1999@gmail.com>",
+  "author": "JasonLyy",
   "license": "MIT",
   "devDependencies": {
     "@types/aws-lambda": "^8.10.89",
